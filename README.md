@@ -32,7 +32,7 @@ Project for UGA HAcks 5!
 
 ### api
 
-- `/code/
+- `/code`
 	- gives generated code
 
 ### Database
