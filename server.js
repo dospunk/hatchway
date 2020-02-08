@@ -9,7 +9,7 @@ app.use(express.static('public'));
 
 
 app.get('/code', (req, res) => {
-	return codeGen.generateCode();
+	res.send(codeGen.generateCode());
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
