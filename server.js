@@ -21,6 +21,7 @@ app.post('/envlist', (req, res) => {
 		if(error) throw error;
 		res.json(results);
 	});
+	connection.end();
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
