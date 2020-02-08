@@ -24,8 +24,14 @@ app.get('/code', (req, res) => {
 	res.send(codeGen.generateCode());
 });
 
-var connect = mysql.createConnection(mysqlLogin);
+var connection = mysql.createConnection(mysqlLogin);
+connection.connect();
+
+connection.query('SELECT * from codes;', function (error, results, fields) {
+	if (error) throw error;
+	console.log(results);
+  });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
-connect.end();
+connection.end();
