@@ -1,5 +1,5 @@
 const express = require('express');
-const codeGen = require('./src/gencode');
+const codeGen = require('./lib/gencode');
 
 const app = express();
 const port = process.env.PORT || 3000;
