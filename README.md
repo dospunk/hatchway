@@ -14,6 +14,7 @@ Project for UGA HAcks 5!
 
 - Hosting
 	- Heroku?
+	- DigitalOcean?
 
 ## Frontend 
 
