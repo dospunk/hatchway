@@ -36,7 +36,7 @@ app.get('/app/:code', (req, res)=>{
 			console.error(`Error: code ${code} is associated with ${results.length} environments`);
 			res.sendFile(path.join(__dirname, "./public", "invalidcode.html"));
 		} else {
-			res.sendFile("/public/envs/"+results[0].envId);
+			res.sendFile(path.join(__dirname, "./public/envs", results[0].path));
 		}
 	});
 	connection.end();
