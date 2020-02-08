@@ -31,7 +31,8 @@ Project for UGA HAcks 5!
 	- accepts POST
 	- **note: `path` and `imgPath` should be prefixed with `/envs/` and `/img/` respectively**
 - `/submitcode`
-	- gets the environment associated with the given code
+	- gets the path to the environment associated with the given code
+		- if the code is invalid, gives path to error page
 	- accepts POST
 	- needs the following parameters
 		- code: the code entered by the student
