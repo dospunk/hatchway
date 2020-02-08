@@ -13,7 +13,7 @@ app.post('/code', (req, res) => {
 	res.send(codeGen.generateCode());
 });
 
-app.post('/envlist', (req, res) => {
+app.get('/envlist', (req, res) => {
 	const connection = mysql.createConnection(mysqlLogin);
 	connection.connect();
 	connection.query('SELECT * from envs;', (error, results, fields) => {
