@@ -33,7 +33,7 @@ app.get('/app', (req, res)=>{
 		if(err) throw err;
 		if(results.length !== 1){
 			console.error(`Error: code ${code} is associated with ${results.length} environments`);
-			res.sendFile("/public/invalidcode.html");
+			res.sendFile("/invalidcode.html");
 		} else {
 			res.sendFile("/public/envs/"+results[0].envId);
 		}
