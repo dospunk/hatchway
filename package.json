@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/dospunk/vredu/issues"
   },
-  "homepage": "https://github.com/dospunk/vredu#readme"
+  "homepage": "https://github.com/dospunk/vredu#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
