@@ -22,7 +22,11 @@ Project for UGA HAcks 5!
 ### api
 
 - `/code`
-	- gives generated code
+	- gives generated code as plain text
+	- accepts POST
+- `/envlist`
+	- gives list of environments as json
+	- accepts POST
 
 ### Database
 
