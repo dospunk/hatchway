@@ -32,7 +32,7 @@ app.get('/app', (req, res)=>{
 	connection.query(`SELECT * from codes where code = '${code}'`, (err, results, fields)=>{
 		if(err) throw err;
 		if(results.length !== 1){
-			console.err(`Error: code ${code} is associated with ${results.length} environments`);
+			console.error(`Error: code ${code} is associated with ${results.length} environments`);
 			res.sendFile("invalidcode.html");
 		} else {
 			res.sendFile("envs/"+results[0].envId);
