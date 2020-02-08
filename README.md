@@ -24,6 +24,8 @@ Project for UGA HAcks 5!
 - `/code`
 	- gives generated code as plain text
 	- accepts POST
+	- needs following parameters
+		- environment: the ID of the selected environment
 - `/envlist`
 	- gives list of environments as json
 	- accepts POST

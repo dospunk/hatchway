@@ -1,5 +1,5 @@
 const express = require('express');
-const codeGen = require('./lib/gencode');
+const codes = require('./lib/codes');
 const mysql = require('mysql');
 const mysqlConf = require("./lib/mysqlconf");
 
@@ -10,7 +10,7 @@ const mysqlLogin = mysqlConf.mysqlLogin;
 app.use(express.static('public'));
 
 app.post('/code', (req, res) => {
-	res.send(codeGen.generateCode());
+	res.send(codes.generateCode());
 });
 
 app.post('/envlist', (req, res) => {
