@@ -7,6 +7,11 @@ Project for UGA HAcks 5!
 - Associate codes with proper environments 
 - Retire unused codes
 
+- What backend framework to use?
+	- Node.js with Express
+		- Typescript or vanilla JS?
+	- Something else?
+
 ## Frontend 
 
 ### Teacher
