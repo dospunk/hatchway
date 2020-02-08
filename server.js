@@ -27,7 +27,7 @@ app.get('/code', (req, res) => {
 var connection = mysql.createConnection(mysqlLogin);
 connection.connect();
 
-connection.query('SELECT * from codes;', function (error, results, fields) {
+connection.query('SELECT * from envs;', function (error, results, fields) {
 	if (error) throw error;
 	console.log(results);
   });
