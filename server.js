@@ -29,7 +29,7 @@ app.get('/app', (req, res)=>{
 	const connection = mysql.createConnection(mysqlLogin);
 	connection.connect();
 	let codeValid;
-	connection.query(`SELECT * from codes were code = ${code}`, (err, results, fields)=>{
+	connection.query(`SELECT * from codes where code = '${code}'`, (err, results, fields)=>{
 		if(err) throw err;
 		if(results.length !== 1){
 			console.err(`Error: code ${code} is associated with ${results.length} environments`);
@@ -41,4 +41,4 @@ app.get('/app', (req, res)=>{
 	connection.end();
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`Listening on port ${port}!`));
