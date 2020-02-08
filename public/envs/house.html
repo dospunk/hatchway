@@ -5,7 +5,7 @@
 	<title>A House</title>
 	<script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js"></script>
-	<script src="./components/door.js"></script>
+	<script src="/envs/components/door.js"></script>
 </head>
 <body>
 	<a-scene>
@@ -13,7 +13,7 @@
 			<a-mixin id="wall-color" material="color: #731000"></a-mixin>
 			<a-mixin id="roof-color" material="color: #373a40"></a-mixin>
 			<a-mixin id="roof-beam" scale="6.3 .2 .2" material="color: #654321"></a-mixin>
-			<a-asset-item id="door-model" src="./models/door.gltf"></a-asset-item>
+			<a-asset-item id="door-model" src="/envs/models/door.gltf"></a-asset-item>
 		</a-assets>
 		<a-entity id="rig"
 				  position="0 1 0"
