@@ -8,9 +8,10 @@ const port = process.env.PORT || 3000;
 const mysqlLogin = mysqlConf.mysqlLogin;
 
 app.use(express.static('public'));
+app.use(express.json())
 
 app.post('/code', (req, res) => {
-	res.send(codes.generateCode());
+	res.send(codes.generateCode(req.body.environment));
 });
 
 app.post('/envlist', (req, res) => {
