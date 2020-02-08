@@ -13,6 +13,9 @@ Project for UGA HAcks 5!
 
 - Display all environemnts
 - generate codes
+- close codes when done with them
+	- Button
+	- On closing the page, [this stackoverflow thread should help](https://stackoverflow.com/questions/7080269/javascript-before-leaving-the-page/7080331)
 
 ### Student
 
