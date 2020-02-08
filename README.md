@@ -30,6 +30,11 @@ Project for UGA HAcks 5!
 	- gives list of environments as json
 	- accepts POST
 	- **note: `path` and `imgPath` should be prefixed with `/envs/` and `/img/` respectively**
+- `/submitcode`
+	- gets the environment associated with the given code
+	- accepts POST
+	- needs the following parameters
+		- code: the code entered by the student
 
 ### Database
 
