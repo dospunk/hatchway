@@ -12,6 +12,9 @@ Project for UGA HAcks 5!
 		- Typescript or vanilla JS?
 	- Something else?
 
+- Hosting
+	- Heroku?
+
 ## Frontend 
 
 ### Teacher
