@@ -27,6 +27,7 @@ Project for UGA HAcks 5!
 - `/envlist`
 	- gives list of environments as json
 	- accepts POST
+	- **note: `path` and `imgPath` should be prefixed with `/envs/` and `/img/` respectively**
 
 ### Database
 
