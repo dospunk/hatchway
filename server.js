@@ -30,12 +30,13 @@ app.get('/app/:code', (req, res)=>{
 	const connection = mysql.createConnection(mysqlLogin);
 	connection.connect();
 	let codeValid;
-	connection.query(`SELECT * from codes where code = '${code}'`, (err, results, fields)=>{
+	connection.query(`SELECT path FROM envs JOIN codes ON envs.envId = codes.envId WHERE code = '${code}';`, (err, results, fields)=>{
 		if(err) throw err;
 		if(results.length !== 1){
 			console.error(`Error: code ${code} is associated with ${results.length} environments`);
 			res.sendFile(path.join(__dirname, "./public", "invalidcode.html"));
 		} else {
+			console.log(results);
 			res.sendFile(path.join(__dirname, "./public/envs", results[0].path));
 		}
 	});
