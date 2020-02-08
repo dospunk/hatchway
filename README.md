@@ -30,7 +30,7 @@ Project for UGA HAcks 5!
 	- gives list of environments as json
 	- accepts POST
 	- **note: `path` and `imgPath` should be prefixed with `/envs/` and `/img/` respectively**
-- `/app`
+- `/app/[code]`
 	- gets the environment associated with the given code
 		- if the code is invalid, gives the error page
 	- accepts POST

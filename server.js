@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 const mysqlLogin = mysqlConf.mysqlLogin;
 
 app.use(express.static('public'));
-app.use(express.json())
+//app.use(express.json())
 
 app.post('/code', (req, res) => {
 	res.send(codes.generateCode(req.body.environment));
@@ -24,8 +24,8 @@ app.post('/envlist', (req, res) => {
 	connection.end();
 });
 
-app.get('/app', (req, res)=>{
-	const code = req.body.code;
+app.get('/app/:code', (req, res)=>{
+	const code = req.params.code;
 	const connection = mysql.createConnection(mysqlLogin);
 	connection.connect();
 	let codeValid;
