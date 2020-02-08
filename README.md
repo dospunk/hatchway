@@ -30,7 +30,10 @@ Project for UGA HAcks 5!
 - Allow student to enter code
 - Load correct environemnt 
 
+### api
 
+- `/code/
+	- gives generated code
 
 ### Database
 
