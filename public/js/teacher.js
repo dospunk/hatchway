@@ -4,7 +4,8 @@ function buildEnvListEntry(data){
 	return `
 	<div>
 		<label>
-			<input type="radio" name="${radioName}" value="${data.envId}"> ${data.name} 
+			<input type="radio" name="${radioName}" value="${data.envId}"> 
+			<img src="/img/${data.imgPath}"> ${data.name} 
 		</label>
 		<span class="desc"> ${data.description} </span>
 	</div>`;
