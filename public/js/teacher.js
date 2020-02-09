@@ -20,6 +20,8 @@ function getCode(){
 		$.post("/code", {environment: selectedEnv}, (data)=>{
 			console.log(data);
 			$("#code").html(data);
+			$("#closeCodeBtn").show();
+			$("#genCodeBtn").hide();
 		}).fail((jqXHR, status, err)=>{
 			console.error(status);
 			throw err;

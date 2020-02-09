@@ -12,6 +12,7 @@ app.use(express.static('public'));
 app.use(express.json())
 
 app.post('/code', (req, res) => {
+	console.log(req.body.environment);
 	res.send(codes.generateCode(req.body.environment));
 });
 
