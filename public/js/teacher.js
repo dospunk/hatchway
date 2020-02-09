@@ -36,6 +36,26 @@ function getCode(){
 	}
 }
 
+function closeCode(){
+	let currCode = $("#code").html();
+	$.ajax({
+		url: "/closecode",
+		type: "POST",
+		data: JSON.stringify({code: currCode}),
+		contentType:'application/json; charset=UTF-8',
+		success: (data)=>{
+			console.log(data);
+			$("#code").html("");
+			$("#closeCodeBtn").hide();
+			$("#genCodeBtn").show();
+		}
+	}).fail((jqXHR, status, err)=>{
+		console.error(status);
+		throw err;
+	});
+
+}
+
 
 $.post("/envlist", {}, (data)=>{
 	$.each(data, (idx, elem)=>{
