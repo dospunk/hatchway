@@ -50,6 +50,7 @@ app.post('/closecode', (req, res)=>{
 	connection.query(`DELETE FROM codes WHERE code = '${code}';`, (err, results, fields) => {
 		if(err) throw err;
 		console.log(results);
+		res.send(results);
 		//TODO: if code isn't deleted, log error
 	});
 	connection.end()
