@@ -18,11 +18,17 @@ function getCode(){
 		alert("You must select an environment");
 	} else {
 		console.log(selectedEnv);
-		$.post("/code", {environment: selectedEnv}, (data)=>{
-			console.log(data);
-			$("#code").html(data);
-			$("#closeCodeBtn").show();
-			$("#genCodeBtn").hide();
+		$.ajax({
+			url: "/code",
+			type: "POST",
+			data: {environment: selectedEnv},
+			dataType:'json',
+			success: (data)=>{
+				console.log(data);
+				$("#code").html(data);
+				$("#closeCodeBtn").show();
+				$("#genCodeBtn").hide();
+			}
 		}).fail((jqXHR, status, err)=>{
 			console.error(status);
 			throw err;
