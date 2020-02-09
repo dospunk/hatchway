@@ -7,6 +7,7 @@ function buildEnvListEntry(data){
 
 $.post("/envlist", {}, (data)=>{
 	$.each(data, (idx, elem)=>{
+		console.log(elem);
 		$("#envs").append(buildEnvListEntry(elem));
 	});
 }).fail((jqXHR, status, err)=>{
