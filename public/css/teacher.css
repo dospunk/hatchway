@@ -26,7 +26,11 @@ header {
 	background-color: #ddd;
 	border-radius: 5%;
 	text-align: center;
+}
+
+.envOption>label{
 	padding-top: 5px;
+	border-radius: 5%;
 }
 
 input[type="radio"]{
