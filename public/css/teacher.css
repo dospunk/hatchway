@@ -2,10 +2,11 @@ header {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
-	align-items: center;
 }
 
 #code {
+	margin-top: auto;
+	margin-bottom: auto;
 	margin-left: 10px;
 	font-size: larger;
 }
