@@ -22,7 +22,7 @@ function getCode(){
 			url: "/code",
 			type: "POST",
 			data: {environment: selectedEnv},
-			dataType:'json',
+			contentType:'application/json; charset=UTF-8',
 			success: (data)=>{
 				console.log(data);
 				$("#code").html(data);
