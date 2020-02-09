@@ -13,7 +13,7 @@ function buildEnvListEntry(data){
 }
 
 function getCode(){
-	let selectedEnv = $('input[type="radio"]:selected').value;
+	let selectedEnv = $('input[type="radio"]:selected').val();
 	console.log(selectedEnv);
 }
 
