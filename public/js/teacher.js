@@ -17,6 +17,7 @@ function getCode(){
 	if (selectedEnv === undefined) {
 		alert("You must select an environment");
 	} else {
+		console.log(selectedEnv);
 		$.post("/code", {environment: selectedEnv}, (data)=>{
 			console.log(data);
 			$("#code").html(data);
