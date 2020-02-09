@@ -21,7 +21,7 @@ header {
 
 #envs{
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	flex-direction: row;
 }
 
