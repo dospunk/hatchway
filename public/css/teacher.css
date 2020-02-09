@@ -9,10 +9,15 @@
 	justify-content: flex-start;
 }
 
+input[type="radio"]{
+	display: none;
+}
+
 input[type="radio"]:checked+label {
 	border: 1px solid blue;
 }
 
 label {
 	border: 1px solid red;
+	text-align: center;
 }
