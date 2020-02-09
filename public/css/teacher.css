@@ -1,4 +1,12 @@
 
+.envs{
+	display: flex;
+}
+
+.envOption{
+	display: flex;
+}
+
 input[type="radio"]:checked+label {
 	border: 1px solid blue;
 }
