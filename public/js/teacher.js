@@ -13,9 +13,15 @@ function buildEnvListEntry(data){
 }
 
 function getCode(){
-	console.log($('input[type="radio"]:checked'));
 	let selectedEnv = $('input[type="radio"]:checked').val();
-	console.log(selectedEnv);
+	if (selectedEnv === undefined) {
+		alert("You must select an environment");
+	} else {
+		$.post("/code", {environment: selectedEnv}, (data)=>{
+			console.log(data);
+			$("#code").html(data);
+		});
+	}
 }
 
 
