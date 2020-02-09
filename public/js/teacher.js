@@ -7,7 +7,7 @@ function buildEnvListEntry(data){
 		<label for="${data.name+data.envId}">
 			<img src="/img/${data.imgPath}" width="100" height="100">
 			<h2>${data.name}</h2>
-			<p class="desc">{data.description}</p>
+			<p class="desc">${data.description}</p>
 		</label>
 	</div>`;
 }

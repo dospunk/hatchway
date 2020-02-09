@@ -21,7 +21,7 @@ header>h1{
 .envOption{
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: center;
 	width: 150px;
 	background-color: #ccc;
 	border-radius: 5%;
