@@ -5,6 +5,8 @@
 
 .envOption{
 	display: flex;
+	flex-direction: column;
+	justify-content: start;
 }
 
 input[type="radio"]:checked+label {
