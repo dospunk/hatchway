@@ -12,6 +12,11 @@ function buildEnvListEntry(data){
 	</div>`;
 }
 
+function getCode(){
+	let selectedEnv = $('input[type="radio"]:selected').value;
+	console.log(selectedEnv);
+}
+
 
 $.post("/envlist", {}, (data)=>{
 	$.each(data, (idx, elem)=>{

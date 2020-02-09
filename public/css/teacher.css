@@ -25,6 +25,7 @@ header {
 	width: 150px;
 	background-color: #ccc;
 	border-radius: 5%;
+	text-align: center;
 }
 
 input[type="radio"]{
