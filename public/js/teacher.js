@@ -21,7 +21,7 @@ function getCode(){
 		$.ajax({
 			url: "/code",
 			type: "POST",
-			data: {environment: selectedEnv},
+			data: JSON.stringify({environment: selectedEnv}),
 			contentType:'application/json; charset=UTF-8',
 			success: (data)=>{
 				console.log(data);
