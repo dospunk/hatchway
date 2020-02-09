@@ -25,7 +25,7 @@ function getCode(){
 			contentType:'application/json; charset=UTF-8',
 			success: (data)=>{
 				console.log(data);
-				$("#code").html(data.toUpperCase());
+				$("#code").html(data);
 				$("#closeCodeBtn").show();
 				$("#genCodeBtn").hide();
 			}
