@@ -4,12 +4,12 @@ header {
 	justify-content: flex-end;
 }
 
-header>h1{
-	align-self: flex-start;
-}
-
 #closeCodeBtn{
 	display: none;
+}
+
+.spacer{
+	flex-grow: 999;
 }
 
 .envs{
