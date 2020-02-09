@@ -1,3 +1,7 @@
 input[type="radio"] {
 	display: none;
 }
+
+input[type="radio"]:checked>label {
+	border: solid blue 1px;
+}
