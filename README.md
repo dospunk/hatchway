@@ -1,4 +1,4 @@
-# vredu
+# Hatchway
 Project for UGA HAcks 5!
 
 ## Backend
