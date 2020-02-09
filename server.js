@@ -29,7 +29,6 @@ app.get('/app/:code', (req, res)=>{
 	const code = req.params.code;
 	const connection = mysql.createConnection(mysqlLogin);
 	connection.connect();
-	let codeValid;
 	connection.query(`SELECT path FROM envs JOIN codes ON envs.envId = codes.envId WHERE code = '${code}';`, (err, results, fields)=>{
 		if(err) throw err;
 		if(results.length !== 1){
@@ -41,6 +40,18 @@ app.get('/app/:code', (req, res)=>{
 		}
 	});
 	connection.end();
+});
+
+app.post('/closecode', (req, res)=>{
+	const code = req.body.code;
+	const connection = mysql.createConnection(mysqlLogin);
+	connection.connect();
+	connection.query(`DELETE FROM codes WHERE code = '${code}';`, (err, results, fields) => {
+		if(err) throw err;
+		console.log(results);
+		//TODO: if code isn't deleted, log error
+	});
+	connection.end()
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}!`));
